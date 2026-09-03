@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nitish Prasad — Data Science Manager, Agentic AI &amp; Forecasting</title>
-<meta name="description" content="Nitish Prasad — Data Science Manager building agentic AI and deep-learning forecasting systems in production. Based in Pune, open to relocation - Worldwide.">
+<title>Nitish Prasad — Data Science Manager, Agentic AI &amp; Machine Learning</title>
+<meta name="description" content="Nitish Prasad — Data Science Manager building Agentic AI and Machine Learning systems in production. Based in Pune, open to relocation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -120,11 +120,39 @@
   }
 
   /* ---------- Companies strip ---------- */
-  .companies{ padding: 40px 0; border-bottom: 1px solid var(--line); }
-  .companies-label{ font-family:'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-faint); margin-bottom: 18px; }
-  .companies-row{ display:flex; flex-wrap:wrap; gap: 12px 34px; align-items:baseline; }
-  .company-name{ font-size: 18px; font-weight: 600; color: var(--ink); opacity: 0.55; }
-  .company-name span{ font-family:'IBM Plex Mono', monospace; font-size: 11px; color: var(--ink-faint); display:block; font-weight:400; margin-top:2px; }
+  .companies{ padding: 56px 0; border-bottom: 1px solid var(--line); }
+  .companies-label{ font-family:'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.04em; color: var(--ink-faint); margin-bottom: 26px; }
+  .companies-row{ display:flex; flex-wrap:wrap; gap: 32px 52px; align-items:center; }
+  .company-card{
+    display:flex;
+    align-items:center;
+    gap: 16px;
+    transition: transform 0.2s ease;
+  }
+  .company-card:hover{
+    transform: translateY(-2px);
+  }
+  .company-logo{
+    height: 42px;
+    width: auto;
+    max-width: 115px;
+    object-fit: contain;
+    display: block;
+  }
+  .company-name{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+  .company-name span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-faint);
+    display:block;
+    font-weight:400;
+    margin-top:4px;
+  }
 
   /* ---------- Section framing ---------- */
   section{ padding: 64px 0; border-top: 1px solid var(--line); }
@@ -160,31 +188,88 @@
 
   .work-meta{ display:flex; flex-wrap:wrap; gap: 8px; margin-bottom: 16px; }
   .tag{ font-family:'IBM Plex Mono', monospace; font-size: 11.5px; color: var(--ink-dim); border: 1px solid var(--line); padding: 3px 8px; background: var(--bg); }
-
-  .eval-bars{ border-top: 1px solid var(--line); padding-top: 16px; margin-bottom: 6px; }
-  .eval-row{ display:grid; grid-template-columns: 130px 1fr 50px; align-items:center; gap: 10px; margin-bottom: 9px; }
-  .eval-row:last-child{ margin-bottom:0; }
-  .eval-name{ font-family:'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-dim); }
-  .eval-track{ height: 8px; background: var(--bg); border: 1px solid var(--line); }
-  .eval-fill{ height:100%; background: var(--good); }
-  .eval-val{ font-family:'IBM Plex Mono', monospace; font-size: 12px; color: var(--good); text-align:right; font-weight:600; }
   .work-note{ color: var(--ink-faint); font-size: 13px; margin-top: 14px; font-style: italic; }
 
   /* ---------- Experience timeline ---------- */
   .timeline{ position:relative; padding-left: 26px; }
   .timeline::before{ content:''; position:absolute; left:5px; top:6px; bottom:6px; width:1px; background: var(--line); }
-  .tl-role{ position:relative; padding-bottom: 32px; }
+  .tl-role{ position:relative; padding-bottom: 38px; }
   .tl-role:last-child{ padding-bottom: 0; }
   .tl-dot{ position:absolute; left:-26px; top:4px; width:11px; height:11px; border-radius:50%; background: var(--paper); border: 2px solid var(--accent); }
   .tl-role.current .tl-dot{ background: var(--accent); }
+
+  /* Two-column flex container to place large logos in the empty right space */
+  .tl-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 36px;
+  }
+  .tl-content{
+    flex: 1;
+    min-width: 0;
+  }
+  .tl-logo-area{
+    flex-shrink: 0;
+    width: 220px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 18px; /* Aligns vertically with the job title */
+  }
+  .tl-large-logo{
+    max-height: 52px;
+    max-width: 180px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease;
+  }
+  .tl-role:hover .tl-large-logo{
+    transform: translateY(-2px);
+  }
+
   .tl-period{ font-family:'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-faint); margin-bottom: 4px; }
-  .tl-title{ font-weight: 600; font-size: 16px; }
-  .tl-org{ color: var(--accent); font-size: 13.5px; margin-bottom: 8px; }
-  .tl-desc{ color: var(--ink-dim); font-size: 14.5px; max-width: 58ch; margin-bottom: 10px; }
+  .tl-title{ font-weight: 600; font-size: 16.5px; margin-bottom: 2px; }
+  .tl-org{ color: var(--accent); font-size: 13.5px; margin-bottom: 10px; }
+  .tl-desc{ color: var(--ink-dim); font-size: 14.5px; max-width: 58ch; margin-bottom: 12px; }
   .tl-bar-row{ display:flex; align-items:center; gap: 10px; }
   .tl-bar-track{ height: 6px; background: var(--line); flex-grow:1; max-width: 260px; }
   .tl-bar-fill{ height:100%; background: var(--accent-soft); border-right: 2px solid var(--accent); }
   .tl-bar-label{ font-family:'IBM Plex Mono', monospace; font-size: 11px; color: var(--ink-faint); white-space:nowrap; }
+
+  /* ---------- Education ---------- */
+  .edu-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .edu-card{
+    border: 1px solid var(--line);
+    background: var(--paper);
+    padding: 22px 24px;
+  }
+  .edu-period{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    color: var(--ink-faint);
+    margin-bottom: 6px;
+  }
+  .edu-degree{
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .edu-field{
+    font-size: 13.5px;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .edu-school{
+    font-size: 13px;
+    color: var(--ink-dim);
+  }
 
   /* ---------- How I work ---------- */
   .philosophy{ font-size: 18px; line-height: 1.6; max-width: 62ch; margin-bottom: 44px; color: var(--ink); }
@@ -221,12 +306,30 @@
   @media (max-width: 760px){
     .hero-grid{ grid-template-columns: 1fr; }
     .hero-photo-card{ max-width: 320px; margin: 0 auto; }
-    .companies-row{ gap: 10px 22px; }
-    .company-name{ font-size: 15px; }
+    .companies{ padding: 40px 0; }
+    .companies-row{ gap: 22px 30px; }
+    .company-logo{ height: 32px; max-width: 85px; }
+    .company-name{ font-size: 15.5px; }
+    
+    .tl-flex{
+      flex-direction: column-reverse;
+      gap: 16px;
+    }
+    .tl-logo-area{
+      width: 100%;
+      justify-content: flex-start;
+      padding-top: 0;
+      margin-bottom: 6px;
+    }
+    .tl-large-logo{
+      max-height: 42px;
+      max-width: 140px;
+    }
+
     .skills-grid{ grid-template-columns: 1fr; }
     .beyond-grid{ grid-template-columns: 1fr; }
     .beyond-photos{ margin-top: 10px; }
-    .eval-row{ grid-template-columns: 100px 1fr 42px; }
+    .edu-grid{ grid-template-columns: 1fr; }
     .nav-links{ gap: 14px; font-size: 13px; }
     .work-head{ padding: 22px 20px 0; }
     .work-body{ padding: 16px 20px 22px; }
@@ -241,6 +344,7 @@
     <nav class="nav-links">
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#beyond">Beyond</a>
       <a href="#contact">Contact</a>
@@ -254,7 +358,7 @@
       <div>
         <div class="hero-kicker mono"><span class="dot"></span>OPEN TO RELOCATION — WORLDWIDE</div>
         <h1>I build AI systems that leave the notebook and ship.</h1>
-        <p class="hero-sub">Data Science Manager at Michelin India. 12 years across automotive, supply chain, logistics, and financial services — currently focused on LangGraph-orchestrated agents, RAG architectures, and deep-learning time-series forecasting.</p>
+        <p class="hero-sub">Data Science Manager at Michelin. 12 years across automotive, supply chain, logistics, and financial services — currently focused on LangGraph-orchestrated agents, RAG architectures, and deep-learning time-series forecasting.</p>
         <div class="hero-links">
           <a class="btn primary" href="mailto:nitishprasad15@gmail.com">Email</a>
           <a class="btn" href="https://www.linkedin.com/in/nitishprasad15/" target="_blank" rel="noopener">LinkedIn</a>
@@ -295,11 +399,26 @@
   <div class="companies">
     <div class="companies-label mono">COMPANIES I'VE WORKED WITH</div>
     <div class="companies-row">
-      <div class="company-name">Michelin India<span>2022 — Present</span></div>
-      <div class="company-name">Cognizant<span>2021 — 2022</span></div>
-      <div class="company-name">AkzoNobel<span>2020 — 2021</span></div>
-      <div class="company-name">Maersk<span>2017 — 2020</span></div>
-      <div class="company-name">XL Dynamics<span>2014 — 2017</span></div>
+      <div class="company-card">
+        <img src="assets/logos/michelin.svg" alt="Michelin" class="company-logo" onerror="this.onerror=null; this.src='assets/logos/michelin.png';">
+        <div class="company-name">Michelin<span>2022 — Present</span></div>
+      </div>
+      <div class="company-card">
+        <img src="assets/logos/cognizant.svg" alt="Cognizant" class="company-logo" onerror="this.onerror=null; this.src='assets/logos/cognizant.png';">
+        <div class="company-name">Cognizant<span>2021 — 2022</span></div>
+      </div>
+      <div class="company-card">
+        <img src="assets/logos/akzonobel.svg" alt="AkzoNobel" class="company-logo" onerror="this.onerror=null; this.src='assets/logos/akzonobel.png';">
+        <div class="company-name">AkzoNobel<span>2020 — 2021</span></div>
+      </div>
+      <div class="company-card">
+        <img src="assets/logos/maersk.svg" alt="Maersk" class="company-logo" onerror="this.onerror=null; this.src='assets/logos/maersk.png';">
+        <div class="company-name">Maersk<span>2017 — 2020</span></div>
+      </div>
+      <div class="company-card">
+        <img src="assets/logos/xldynamics.svg" alt="XL Dynamics" class="company-logo" onerror="this.onerror=null; this.src='assets/logos/xldynamics.png';">
+        <div class="company-name">XL Dynamics<span>2014 — 2017</span></div>
+      </div>
     </div>
   </div>
 
@@ -309,11 +428,63 @@
       <h2>Selected Work</h2>
       <span class="section-note">public repos · offline-runnable</span>
     </div>
-    <p class="section-intro">Three projects built to be run, not just read — each one works fully offline with zero API keys, and upgrades automatically the moment you add one.</p>
+    <p class="section-intro">Five projects built to be run, not just read — each one works fully offline with zero API keys, and upgrades automatically the moment you add one.</p>
 
     <div class="work-item">
       <div class="work-head">
         <div class="work-index mono">01</div>
+        <div class="work-title-block">
+          <div class="work-kicker mono">Agentic AI · Financial Services</div>
+          <div class="work-title">Agentic Fraud Detection Pipeline</div>
+        </div>
+        <div class="work-links"><a href="https://github.com/NitishPrasad15/agentic-fraud-detection" target="_blank" rel="noopener">Code ↗</a></div>
+      </div>
+      <div class="work-body">
+        <div class="work-desc">An autonomous multi-agent investigation pipeline designed to identify, explain, and flag anomalous transaction patterns. It combines deterministic pattern verification with SHAP-based attribution for root-cause analysis, running fully offline with the ability to scale to LLM-driven reasoning when API access is provided.</div>
+        <div class="flow">
+          <div class="flow-step">Transaction data</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Risk router</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Investigation /<br>Verification agents</div><div class="flow-arrow">→</div>
+          <div class="flow-step">SHAP attribution</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Flag &amp; Explain</div>
+        </div>
+        <div class="work-meta">
+          <span class="tag">LangGraph</span><span class="tag">CrewAI</span><span class="tag">Scikit-learn</span>
+          <span class="tag">SHAP</span><span class="tag">Python 3.12</span>
+        </div>
+        <div class="work-note">Engineered to eliminate black-box alerts by forcing the agentic workflow to cite specific statistical deviations before flagging a transaction.</div>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <div class="work-head">
+        <div class="work-index mono">02</div>
+        <div class="work-title-block">
+          <div class="work-kicker mono">Agentic AI · Support Operations</div>
+          <div class="work-title">Agentic Support Triage &amp; Routing Engine</div>
+        </div>
+        <div class="work-links"><a href="https://github.com/NitishPrasad15/agentic-support-triage" target="_blank" rel="noopener">Code ↗</a></div>
+      </div>
+      <div class="work-body">
+        <div class="work-desc">An autonomous multi-agent triage system that analyzes inbound support tickets, infers urgency and customer sentiment, and routes requests to domain-specific resolution sub-agents. Operates entirely offline using deterministic routing and heuristic validation, scaling cleanly to LLM-driven reasoning when an API key is provided.</div>
+        <div class="flow">
+          <div class="flow-step">Inbound ticket</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Triage router</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Resolution /<br>Escalation agents</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Context verification</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Draft response / Hand-off</div>
+        </div>
+        <div class="work-meta">
+          <span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">Pydantic</span>
+          <span class="tag">Streamlit</span><span class="tag">Python 3.12</span>
+        </div>
+        <div class="work-note">Built to eliminate manual routing bottlenecks while generating structured audit trails and reasoning traces for human escalations.</div>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <div class="work-head">
+        <div class="work-index mono">03</div>
         <div class="work-title-block">
           <div class="work-kicker mono">Agentic AI · Supply Chain</div>
           <div class="work-title">Multi-Agent Supply Chain Assistant</div>
@@ -339,7 +510,7 @@
 
     <div class="work-item">
       <div class="work-head">
-        <div class="work-index mono">02</div>
+        <div class="work-index mono">04</div>
         <div class="work-title-block">
           <div class="work-kicker mono">Retrieval · Evaluation</div>
           <div class="work-title">Production-Grade RAG Pipeline with Evaluation</div>
@@ -359,18 +530,13 @@
           <span class="tag">LangChain</span><span class="tag">rank_bm25</span><span class="tag">Streamlit</span>
           <span class="tag">pytest</span><span class="tag">Python 3.12</span>
         </div>
-        <div class="eval-bars">
-          <div class="eval-row"><div class="eval-name">Hit Rate @ 3</div><div class="eval-track"><div class="eval-fill" style="width:100%"></div></div><div class="eval-val">100%</div></div>
-          <div class="eval-row"><div class="eval-name">MRR</div><div class="eval-track"><div class="eval-fill" style="width:100%"></div></div><div class="eval-val">1.00</div></div>
-          <div class="eval-row"><div class="eval-name">Keyword recall</div><div class="eval-track"><div class="eval-fill" style="width:90%"></div></div><div class="eval-val">90%</div></div>
-        </div>
         <div class="work-note">The eval also caught a real lexical-vs-semantic retrieval miss — documented in the repo, not hidden.</div>
       </div>
     </div>
 
     <div class="work-item">
       <div class="work-head">
-        <div class="work-index mono">03</div>
+        <div class="work-index mono">05</div>
         <div class="work-title-block">
           <div class="work-kicker mono">NLP · Sentiment</div>
           <div class="work-title">AspectPulse — Aspect-Based Sentiment &amp; Root-Cause Extraction</div>
@@ -404,50 +570,111 @@
     <div class="timeline">
       <div class="tl-role current">
         <div class="tl-dot"></div>
-        <div class="tl-period">Sep 2022 — Present</div>
-        <div class="tl-title">Manager, Data Scientist</div>
-        <div class="tl-org">Michelin India Pvt Ltd, Pune</div>
-        <div class="tl-desc">Directing production deployment of an autonomous forecasting agent (LangChain/LangGraph) and deep learning demand models (NBEATS, TFT) on Azure Databricks and AMLS. Built an enterprise RAG decision engine and led agentic ML research using Azure OpenAI and LLM workflows.</div>
-        <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:88%"></div></div><div class="tl-bar-label">4 yrs, ongoing</div></div>
+        <div class="tl-flex">
+          <div class="tl-content">
+            <div class="tl-period">Sep 2022 — Present</div>
+            <div class="tl-title">Manager, Data Scientist</div>
+            <div class="tl-org">Michelin, Pune</div>
+            <div class="tl-desc">Directing production deployment of an autonomous forecasting agent (LangChain/LangGraph) and deep learning demand models (NBEATS, TFT) on Azure Databricks and AMLS. Built an enterprise RAG decision engine and led agentic ML research using Azure OpenAI and LLM workflows.</div>
+            <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:88%"></div></div><div class="tl-bar-label">4 yrs, ongoing</div></div>
+          </div>
+          <div class="tl-logo-area">
+            <img src="assets/logos/michelin.svg" alt="Michelin" class="tl-large-logo" onerror="this.onerror=null; this.src='assets/logos/michelin.png';">
+          </div>
+        </div>
       </div>
+
       <div class="tl-role">
         <div class="tl-dot"></div>
-        <div class="tl-period">Oct 2021 — Sep 2022</div>
-        <div class="tl-title">Data Scientist</div>
-        <div class="tl-org">Cognizant (Client: ING Bank), Pune</div>
-        <div class="tl-desc">Fine-tuned NLP models with SpaCy and Hugging Face for intent recognition, and led a conversational AI upgrade from Dialogflow ES to CX, reducing support escalations by 18%.</div>
-        <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:22%"></div></div><div class="tl-bar-label">1 yr</div></div>
+        <div class="tl-flex">
+          <div class="tl-content">
+            <div class="tl-period">Oct 2021 — Sep 2022</div>
+            <div class="tl-title">Data Scientist</div>
+            <div class="tl-org">Cognizant (Client: Bank in Netherlands), Pune</div>
+            <div class="tl-desc">Fine-tuned NLP models with SpaCy and Hugging Face for intent recognition, and led a conversational AI upgrade from Dialogflow ES to CX, reducing support escalations by 18%.</div>
+            <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:22%"></div></div><div class="tl-bar-label">1 yr</div></div>
+          </div>
+          <div class="tl-logo-area">
+            <img src="assets/logos/cognizant.svg" alt="Cognizant" class="tl-large-logo" onerror="this.onerror=null; this.src='assets/logos/cognizant.png';">
+          </div>
+        </div>
       </div>
+
       <div class="tl-role">
         <div class="tl-dot"></div>
-        <div class="tl-period">May 2020 — Oct 2021</div>
-        <div class="tl-title">Analyst</div>
-        <div class="tl-org">AkzoNobel India Ltd, Pune</div>
-        <div class="tl-desc">Built predictive models for invoice payment timeliness and logistics KPIs, and designed enterprise Power BI dashboards with row-level security for global reporting.</div>
-        <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:33%"></div></div><div class="tl-bar-label">1.5 yrs</div></div>
+        <div class="tl-flex">
+          <div class="tl-content">
+            <div class="tl-period">May 2020 — Oct 2021</div>
+            <div class="tl-title">Analyst</div>
+            <div class="tl-org">AkzoNobel, Pune</div>
+            <div class="tl-desc">Built predictive models for invoice payment timeliness and logistics KPIs, and designed enterprise Power BI dashboards with row-level security for global reporting.</div>
+            <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:33%"></div></div><div class="tl-bar-label">1.5 yrs</div></div>
+          </div>
+          <div class="tl-logo-area">
+            <img src="assets/logos/akzonobel.svg" alt="AkzoNobel" class="tl-large-logo" onerror="this.onerror=null; this.src='assets/logos/akzonobel.png';">
+          </div>
+        </div>
       </div>
+
       <div class="tl-role">
         <div class="tl-dot"></div>
-        <div class="tl-period">Jul 2017 — May 2020</div>
-        <div class="tl-title">Data Analyst</div>
-        <div class="tl-org">A.P. Moller – Maersk, Pune</div>
-        <div class="tl-desc">Engineered financial time-series forecasting models and customer risk clustering models to support finance and risk decision-making.</div>
-        <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:66%"></div></div><div class="tl-bar-label">2.8 yrs</div></div>
+        <div class="tl-flex">
+          <div class="tl-content">
+            <div class="tl-period">Jul 2017 — May 2020</div>
+            <div class="tl-title">Data Analyst</div>
+            <div class="tl-org">A.P. Moller – Maersk, Pune</div>
+            <div class="tl-desc">Engineered financial time-series forecasting models and customer risk clustering models to support finance and risk decision-making.</div>
+            <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:66%"></div></div><div class="tl-bar-label">2.8 yrs</div></div>
+          </div>
+          <div class="tl-logo-area">
+            <img src="assets/logos/maersk.svg" alt="Maersk" class="tl-large-logo" onerror="this.onerror=null; this.src='assets/logos/maersk.png';">
+          </div>
+        </div>
       </div>
+
       <div class="tl-role">
         <div class="tl-dot"></div>
-        <div class="tl-period">May 2014 — Apr 2017</div>
-        <div class="tl-title">Financial Analyst</div>
-        <div class="tl-org">XL Dynamics (Client: Sun West Mortgage), Mumbai</div>
-        <div class="tl-desc">Applied statistical trend modeling to retail banking portfolios and built anomaly detection frameworks to catch duplicate loan entries.</div>
-        <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:65%"></div></div><div class="tl-bar-label">2.9 yrs</div></div>
+        <div class="tl-flex">
+          <div class="tl-content">
+            <div class="tl-period">May 2014 — Apr 2017</div>
+            <div class="tl-title">Financial Analyst</div>
+            <div class="tl-org">XL Dynamics (Client: Banking & Mortgages company in US), Mumbai</div>
+            <div class="tl-desc">Applied statistical trend modeling to retail banking portfolios and built anomaly detection frameworks to catch duplicate loan entries.</div>
+            <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:65%"></div></div><div class="tl-bar-label">2.9 yrs</div></div>
+          </div>
+          <div class="tl-logo-area">
+            <img src="assets/logos/xldynamics.svg" alt="XL Dynamics" class="tl-large-logo" onerror="this.onerror=null; this.src='assets/logos/xldynamics.png';">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2>Education</h2>
+      <span class="section-note">degrees &amp; academics</span>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-period mono">2012 — 2014</div>
+        <div class="edu-degree">Master of Business Administration (MBA)</div>
+        <div class="edu-field">Financial Management</div>
+        <div class="edu-school">University of Pune</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-period mono">2008 — 2012</div>
+        <div class="edu-degree">Bachelor of Engineering (BE)</div>
+        <div class="edu-field">Electronics and Telecommunications</div>
+        <div class="edu-school">University of Pune</div>
       </div>
     </div>
   </section>
 
   <section id="skills">
     <div class="section-head">
-      <span class="section-num">03</span>
+      <span class="section-num">04</span>
       <h2>How I Work</h2>
     </div>
     <p class="philosophy">I care whether a model survives contact with production, not just whether it beats a benchmark. Most of my work sits at the boundary between a working prototype and something reliable enough to hand to a planner or an operations team — which is why every project here ships with an evaluation harness, not just a demo.</p>
@@ -490,12 +717,12 @@
 <section id="beyond">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-num mono">04</span>
+      <span class="section-num mono">05</span>
       <h2>Beyond Work</h2>
     </div>
     <div class="beyond-grid">
       <div>
-        <p class="beyond-text">When I'm not building forecasting agents, I'm usually <strong>travelling</strong> somewhere with a proper elevation gain, chasing the next <strong>adventure</strong> — treks, mountain roads, unfamiliar terrain — or lying flat on a hillside for a bit of <strong>stargazing</strong> once the fog clears.</p>
+        <p class="beyond-text">When I'm not building AI Agents, I'm usually <strong>travelling</strong> somewhere with a proper elevation gain, chasing the next <strong>adventure</strong> — treks, mountain roads, unfamiliar terrain — or lying flat on a hillside for a bit of <strong>stargazing</strong> once the fog clears.</p>
         <div class="beyond-tags">
           <span class="beyond-tag">Travel</span>
           <span class="beyond-tag">Adventure</span>
@@ -519,7 +746,7 @@
 <div class="wrap">
   <section id="contact">
     <div class="section-head">
-      <span class="section-num">05</span>
+      <span class="section-num">06</span>
       <h2>Contact</h2>
     </div>
     <p style="color:var(--ink-dim); max-width:60ch; font-size:15.5px;">Based in Pune, India — open to relocating worldwide. The fastest way to reach me is email.</p>
