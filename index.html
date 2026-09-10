@@ -245,6 +245,30 @@
   }
   .work-note{color:var(--ink-faint);font-size:12px;margin-top:13px;font-style:italic}
 
+  /* IMPACT */
+  .impact-strip{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 10px;
+  }
+  .impact-card{
+    border:1px solid rgba(17,24,39,.09);background:rgba(255,255,255,.86);
+    border-radius:18px;padding:18px 18px 16px;box-shadow:0 10px 28px rgba(15,23,42,.04);
+    position:relative;overflow:hidden;
+  }
+  .impact-card::before{
+    content:"";position:absolute;left:0;top:0;width:100%;height:3px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2),var(--accent-3));
+  }
+  .impact-value{font-family:'Space Grotesk',sans-serif;font-size:27px;line-height:1;font-weight:700;letter-spacing:-.04em;color:#111827;margin-bottom:7px}
+  .impact-label{font-size:11px;color:#697587;line-height:1.35}
+  .impact-note{font-family:'Space Grotesk',sans-serif;font-size:9.5px;color:#8b95a5;text-transform:uppercase;letter-spacing:.08em;margin-top:7px}
+  .looking-for{
+    margin-top:22px;padding:14px 16px;border:1px solid rgba(109,40,217,.14);
+    background:linear-gradient(90deg,rgba(109,40,217,.05),rgba(8,145,178,.04));border-radius:14px;
+    color:#596579;font-size:12px;line-height:1.5;
+  }
+  .looking-for strong{color:#33246a}
+  .impact-band{padding:0 0 54px}
+
   /* EXPERIENCE */
   .timeline{position:relative;padding-left:25px}
   .timeline::before{content:'';position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:linear-gradient(var(--accent),rgba(255,255,255,.08))}
@@ -348,6 +372,7 @@
     .nav-links{gap:11px;font-size:11px;overflow:auto;white-space:nowrap}
     .hero{padding-top:65px}
     .hero-grid{grid-template-columns:1fr;gap:34px}
+    .impact-strip{grid-template-columns:repeat(2,1fr)}
     h1{font-size:clamp(40px,13vw,60px);max-width:11ch}
     .hero-photo-card{max-width:360px;margin:0 auto;width:100%}
     .companies{padding:40px 0}
@@ -375,6 +400,8 @@
   @media (max-width:520px){
     .nav-links a:nth-child(3),.nav-links a:nth-child(4){display:none}
     .company-card{flex-basis:100%}
+    .impact-strip{grid-template-columns:1fr 1fr}
+    .impact-value{font-size:24px}
     .hero-links .btn{flex:1;justify-content:center}
     .work-title{font-size:18px}
     .flow-arrow{padding:0 4px}
@@ -542,7 +569,7 @@
       <div>
         <div class="hero-kicker mono"><span class="dot"></span>OPEN TO RELOCATION — WORLDWIDE</div>
         <h1>I build AI systems that leave the notebook and ship.</h1>
-        <p class="hero-sub">Data Science Manager at Michelin. 12 years across automotive, supply chain, logistics, and financial services — currently focused on LangGraph-orchestrated agents, RAG architectures, and deep-learning time-series forecasting.</p>
+        <p class="hero-sub">Data Science Manager at Michelin with 12 years across automotive, supply chain, logistics, fintech, banking, and mortgage analytics — building production Agentic AI, RAG, and deep-learning forecasting systems with measurable business impact.</p>
         <div class="hero-links">
           <a class="btn primary" href="mailto:nitishprasad15@gmail.com">✉ Email</a>
           <a class="btn" href="https://www.linkedin.com/in/nitishprasad15/" target="_blank" rel="noopener">in&nbsp; LinkedIn</a>
@@ -550,6 +577,7 @@
           <a class="btn" href="Nitish_Prasad_CV.pdf" target="_blank" rel="noopener">↓ Download CV</a>
         </div>
         <div class="mono" style="margin-top:14px;color:var(--ink-faint);font-size:10px;letter-spacing:.08em;">BUILDING • EVALUATING • SHIPPING</div>
+        <div class="looking-for"><strong>Currently exploring:</strong> Senior / Lead Data Science, Data Science Manager, GenAI / Agentic AI, and Applied AI opportunities. Open to relocation and senior opportunities with meaningful technical and business ownership.</div>
       </div>
       <div class="hero-photo-card">
         <img src="assets/hero.jpg" alt="Nitish Prasad on a monsoon trek in the hills near Pune">
@@ -557,6 +585,31 @@
       </div>
     </div>
   </section>
+</div>
+
+<div class="wrap impact-band reveal">
+  <div class="impact-strip">
+    <div class="impact-card">
+      <div class="impact-value">12+</div>
+      <div class="impact-label">Years across Data Science, Analytics &amp; AI</div>
+      <div class="impact-note">Leadership + delivery</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-value">10% MAPE</div>
+      <div class="impact-label">Forecast accuracy improvement on operational demand models</div>
+      <div class="impact-note">Advanced forecasting</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-value">€300K</div>
+      <div class="impact-label">Business value delivered through improved forecasting</div>
+      <div class="impact-note">Michelin impact</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-value">40%</div>
+      <div class="impact-label">Reduction in manual planning cycle time</div>
+      <div class="impact-note">Agentic forecasting</div>
+    </div>
+  </div>
 </div>
 
 <div class="marquee-band">
@@ -567,7 +620,7 @@
     <div class="marquee-item accent">RAG Systems</div>
     <div class="marquee-item">Deep Learning Forecasting</div>
     <div class="marquee-item accent">Azure Databricks</div>
-    <div class="marquee-item">12 Years Experience</div>
+    <div class="marquee-item">12+ Years Experience</div>
     <div class="marquee-item accent">Open to Relocate</div>
     <div class="marquee-item">Data Science Manager</div>
     <div class="marquee-item">Agentic AI</div>
@@ -575,7 +628,7 @@
     <div class="marquee-item accent">RAG Systems</div>
     <div class="marquee-item">Deep Learning Forecasting</div>
     <div class="marquee-item accent">Azure Databricks</div>
-    <div class="marquee-item">12 Years Experience</div>
+    <div class="marquee-item">12+ Years Experience</div>
     <div class="marquee-item accent">Open to Relocate</div>
   </div>
 </div>
@@ -613,11 +666,37 @@
       <h2>Selected Work</h2>
       <span class="section-note">public repos · offline-runnable</span>
     </div>
-    <p class="section-intro">Five projects built to be run, not just read — each one works fully offline with zero API keys, and upgrades automatically the moment you add one.</p>
+    <p class="section-intro">Five implementation-focused projects built to be run, not just read — covering Agentic AI, RAG, NLP, customer intelligence, fraud analytics, and supply-chain decision support. The public projects complement my production work rather than replace it.</p>
 
     <div class="work-item">
       <div class="work-head">
         <div class="work-index mono">01</div>
+        <div class="work-title-block">
+          <div class="work-kicker mono">Agentic AI · Customer Experience Analytics</div>
+          <div class="work-title">Agentic Review Intelligence — TGW &amp; Sentiment Index Monitoring</div>
+        </div>
+        <div class="work-links"><a href="https://github.com/NitishPrasad15/agentic-review-intelligence" target="_blank" rel="noopener">Code ↗</a></div>
+      </div>
+      <div class="work-body">
+        <div class="work-desc">A multi-agent system that turns raw product reviews into the two metrics stakeholders actually ask for — a severity-weighted Things Gone Wrong (TGW) Index and a Sentiment Index — tracked monthly by topic and product line across 5 years of synthetic data. A router dispatches to a metrics agent, an LLM-driven emerging-topic agent that reads monthly metrics to judge which known topics are genuinely trending and reads raw unassigned review text to discover and name brand-new themes with no keyword yet, and a hybrid BM25 RAG agent for cited stakeholder Q&amp;A. Runs fully offline in a statistical fallback mode; the moment an OpenAI API key is added, emerging-topic detection switches entirely to LLM reasoning.</div>
+        <div class="flow">
+          <div class="flow-step">Review corpus</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Router agent</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Metrics / LLM-emerging /<br>RAG agent</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Hybrid BM25<br>retrieval</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Dashboard &amp; cited answer</div>
+        </div>
+        <div class="work-meta">
+          <span class="tag">LangGraph</span><span class="tag">OpenAI API</span><span class="tag">rank_bm25</span>
+          <span class="tag">scikit-learn (fallback)</span><span class="tag">Streamlit</span><span class="tag">Python 3.12</span>
+        </div>
+        <div class="work-note">Evaluated against synthetic ground truth, not eyeballed: 94.7% topic-tagging accuracy, 95% recovery of an injected known-topic emergence, 89.4% correct-unassigned rate on a second, genuinely novel no-keyword topic reserved for the LLM to discover, and 100% retrieval@1 on a labeled query set. LLM prompt/parsing logic covered by 8 stub-based unit tests, no network call required.</div>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <div class="work-head">
+        <div class="work-index mono">02</div>
         <div class="work-title-block">
           <div class="work-kicker mono">Agentic AI · Financial Services</div>
           <div class="work-title">Agentic Fraud Detection Pipeline</div>
@@ -643,7 +722,7 @@
 
     <div class="work-item">
       <div class="work-head">
-        <div class="work-index mono">02</div>
+        <div class="work-index mono">03</div>
         <div class="work-title-block">
           <div class="work-kicker mono">Agentic AI · Support Operations</div>
           <div class="work-title">Agentic Support Triage &amp; Routing Engine</div>
@@ -669,7 +748,7 @@
 
     <div class="work-item">
       <div class="work-head">
-        <div class="work-index mono">03</div>
+        <div class="work-index mono">04</div>
         <div class="work-title-block">
           <div class="work-kicker mono">Agentic AI · Supply Chain</div>
           <div class="work-title">Multi-Agent Supply Chain Assistant</div>
@@ -695,7 +774,7 @@
 
     <div class="work-item">
       <div class="work-head">
-        <div class="work-index mono">04</div>
+        <div class="work-index mono">05</div>
         <div class="work-title-block">
           <div class="work-kicker mono">Retrieval · Evaluation</div>
           <div class="work-title">Production-Grade RAG Pipeline with Evaluation</div>
@@ -719,37 +798,14 @@
       </div>
     </div>
 
-    <div class="work-item">
-      <div class="work-head">
-        <div class="work-index mono">05</div>
-        <div class="work-title-block">
-          <div class="work-kicker mono">NLP · Sentiment</div>
-          <div class="work-title">AspectPulse — Aspect-Based Sentiment &amp; Root-Cause Extraction</div>
-        </div>
-        <div class="work-links"><a href="https://github.com/NitishPrasad15/AspectPulse" target="_blank" rel="noopener">Code ↗</a></div>
-      </div>
-      <div class="work-body">
-        <div class="work-desc">An NLP diagnostic pipeline that extracts fine-grained aspect targets from customer and vendor feedback, scores contextual sentiment with a fine-tuned DistilBERT classifier, and clusters negative feedback into operational failure themes using MiniLM embeddings and KMeans — surfaced through an interactive Streamlit dashboard.</div>
-        <div class="flow">
-          <div class="flow-step">Feedback text</div><div class="flow-arrow">→</div>
-          <div class="flow-step">SpaCy dependency<br>extractor</div><div class="flow-arrow">→</div>
-          <div class="flow-step">DistilBERT<br>polarity</div><div class="flow-arrow">→</div>
-          <div class="flow-step">MiniLM + KMeans<br>clustering</div><div class="flow-arrow">→</div>
-          <div class="flow-step">Dashboard</div>
-        </div>
-        <div class="work-meta">
-          <span class="tag">SpaCy</span><span class="tag">Hugging Face</span><span class="tag">DistilBERT</span>
-          <span class="tag">MiniLM</span><span class="tag">Streamlit</span>
-        </div>
-      </div>
-    </div>
+
   </section>
 
   <section id="experience" class="reveal">
     <div class="section-head">
       <span class="section-num">02</span>
       <h2>Experience</h2>
-      <span class="section-note">2014 — present · 12 yrs</span>
+      <span class="section-note">2014 — present · 12+ yrs</span>
     </div>
 
     <div class="timeline">
@@ -760,7 +816,7 @@
             <div class="tl-period">Sep 2022 — Present</div>
             <div class="tl-title">Manager, Data Scientist</div>
             <div class="tl-org">Michelin, Pune</div>
-            <div class="tl-desc">Directing production deployment of an autonomous forecasting agent (LangChain/LangGraph) and deep learning demand models (NBEATS, TFT) on Azure Databricks and AMLS. Built an enterprise RAG decision engine and led agentic ML research using Azure OpenAI and LLM workflows.</div>
+            <div class="tl-desc">Directed production deployment of an autonomous forecasting agent using LangChain/LangGraph, reducing manual planning cycle time by 40%. Orchestrated NBEATS/TFT deep-learning demand models on Azure Databricks and AMLS, improving forecast accuracy by 10% MAPE and delivering €300K in value. Architected an enterprise RAG decision engine that cut analysis turnaround by 35%, while leading Azure OpenAI / LLM experimentation, improving CSAT by 8%, and mentoring data scientists.</div>
             <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:88%"></div></div><div class="tl-bar-label">4 yrs, ongoing</div></div>
           </div>
           <div class="tl-logo-area">
@@ -776,7 +832,7 @@
             <div class="tl-period">Oct 2021 — Sep 2022</div>
             <div class="tl-title">Data Scientist</div>
             <div class="tl-org">Cognizant (Client: Bank in Netherlands), Pune</div>
-            <div class="tl-desc">Fine-tuned NLP models with SpaCy and Hugging Face for intent recognition, and led a conversational AI upgrade from Dialogflow ES to CX, reducing support escalations by 18%.</div>
+            <div class="tl-desc">Fine-tuned NLP models with SpaCy and Hugging Face for intent recognition and entity extraction, increasing prediction accuracy by 14%. Led a Dialogflow ES → CX migration that reduced support escalations by 18%, supported by structured model error analysis.</div>
             <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:22%"></div></div><div class="tl-bar-label">1 yr</div></div>
           </div>
           <div class="tl-logo-area">
@@ -792,7 +848,7 @@
             <div class="tl-period">May 2020 — Oct 2021</div>
             <div class="tl-title">Analyst</div>
             <div class="tl-org">AkzoNobel, Pune</div>
-            <div class="tl-desc">Built predictive models for invoice payment timeliness and logistics KPIs, and designed enterprise Power BI dashboards with row-level security for global reporting.</div>
+            <div class="tl-desc">Built predictive models for invoice payment timeliness, reducing overdue payment delays by 15%, and developed logistics KPI models that improved delivery SLA compliance by 12%. Designed enterprise Power BI dashboards with row-level security for global reporting.</div>
             <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:33%"></div></div><div class="tl-bar-label">1.5 yrs</div></div>
           </div>
           <div class="tl-logo-area">
@@ -808,7 +864,7 @@
             <div class="tl-period">Jul 2017 — May 2020</div>
             <div class="tl-title">Data Analyst</div>
             <div class="tl-org">A.P. Moller – Maersk, Pune</div>
-            <div class="tl-desc">Engineered financial time-series forecasting models and customer risk clustering models to support finance and risk decision-making.</div>
+            <div class="tl-desc">Engineered financial time-series forecasting models achieving approximately 84% accuracy, improving planning confidence for finance stakeholders. Built customer risk clustering models to support targeted risk-based decision-making.</div>
             <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:66%"></div></div><div class="tl-bar-label">2.8 yrs</div></div>
           </div>
           <div class="tl-logo-area">
@@ -824,7 +880,7 @@
             <div class="tl-period">May 2014 — Apr 2017</div>
             <div class="tl-title">Financial Analyst</div>
             <div class="tl-org">XL Dynamics (Client: Banking & Mortgages company in US), Mumbai</div>
-            <div class="tl-desc">Applied statistical trend modeling to retail banking portfolios and built anomaly detection frameworks to catch duplicate loan entries.</div>
+            <div class="tl-desc">Applied statistical trend modeling to retail banking portfolios to evaluate credit performance and default distributions. Engineered anomaly and outlier detection frameworks to identify duplicate loan entries and reduce operational risk.</div>
             <div class="tl-bar-row"><div class="tl-bar-track"><div class="tl-bar-fill" style="width:65%"></div></div><div class="tl-bar-label">2.9 yrs</div></div>
           </div>
           <div class="tl-logo-area">
@@ -839,7 +895,7 @@
     <div class="section-head">
       <span class="section-num">03</span>
       <h2>Education</h2>
-      <span class="section-note">degrees &amp; academics</span>
+      <span class="section-note">MBA + Engineering</span>
     </div>
     <div class="edu-grid">
       <div class="edu-card">
@@ -860,39 +916,39 @@
   <section id="skills" class="reveal">
     <div class="section-head">
       <span class="section-num">04</span>
-      <h2>How I Work</h2>
+      <h2>Capabilities</h2>
     </div>
-    <p class="philosophy">I care whether a model survives contact with production, not just whether it beats a benchmark. Most of my work sits at the boundary between a working prototype and something reliable enough to hand to a planner or an operations team — which is why every project here ships with an evaluation harness, not just a demo.</p>
+    <p class="philosophy">I work at the boundary between advanced modeling and business execution: framing the problem, selecting the right architecture, evaluating it against meaningful metrics, productionizing it on cloud infrastructure, and helping teams adopt the result. The goal is not a clever demo — it is a reliable system with measurable ROI.</p>
     <div class="skills-grid">
       <div class="skill-group">
-        <div class="skill-group-title">Deep Learning &amp; ML</div>
+        <div class="skill-group-title">Agentic AI &amp; GenAI</div>
         <div class="skill-chips">
-          <span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">NBEATS</span>
-          <span class="chip">TFT</span><span class="chip">Feature engineering</span><span class="chip">Embedding models</span>
-          <span class="chip">Vector databases</span>
+          <span class="chip">LangGraph</span><span class="chip">LangChain</span><span class="chip">Agentic workflows</span>
+          <span class="chip">RAG architectures</span><span class="chip">LLMs</span><span class="chip">Prompt engineering</span>
+          <span class="chip">Azure OpenAI</span><span class="chip">Autonomous experiments</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">Agentic AI &amp; NLP</div>
+        <div class="skill-group-title">ML, Deep Learning &amp; NLP</div>
         <div class="skill-chips">
-          <span class="chip">LangGraph</span><span class="chip">LangChain</span><span class="chip">RAG</span>
-          <span class="chip">LLMs</span><span class="chip">Prompt engineering</span><span class="chip">SpaCy</span>
-          <span class="chip">Hugging Face</span>
+          <span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">NBEATS</span><span class="chip">TFT</span>
+          <span class="chip">Feature engineering</span><span class="chip">Embedding models</span><span class="chip">Vector databases</span>
+          <span class="chip">SpaCy</span><span class="chip">Hugging Face</span><span class="chip">Aspect-based sentiment</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">Cloud &amp; MLOps</div>
+        <div class="skill-group-title">Cloud, MLOps &amp; Data</div>
         <div class="skill-chips">
-          <span class="chip">Azure Databricks</span><span class="chip">AMLS</span><span class="chip">Production pipelines</span>
-          <span class="chip">Drift monitoring</span><span class="chip">Python</span><span class="chip">SQL</span>
-          <span class="chip">Streamlit</span><span class="chip">Power BI</span>
+          <span class="chip">Azure Databricks</span><span class="chip">AMLS</span><span class="chip">Production ML pipelines</span>
+          <span class="chip">Model monitoring</span><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Streamlit</span><span class="chip">Power BI</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">Domain</div>
+        <div class="skill-group-title">Leadership &amp; Domains</div>
         <div class="skill-chips">
-          <span class="chip">Automotive</span><span class="chip">Supply chain &amp; logistics</span>
-          <span class="chip">Financial services</span><span class="chip">Banking</span><span class="chip">Mortgage analytics</span>
+          <span class="chip">AI solution architecture</span><span class="chip">Technical mentorship</span><span class="chip">Product roadmapping</span>
+          <span class="chip">Automotive</span><span class="chip">Supply chain &amp; logistics</span><span class="chip">Financial services</span>
+          <span class="chip">Banking</span><span class="chip">Mortgage analytics</span>
         </div>
       </div>
     </div>
@@ -934,7 +990,7 @@
       <span class="section-num">06</span>
       <h2>Contact</h2>
     </div>
-    <p style="color:var(--ink-dim); max-width:60ch; font-size:15.5px;">Based in Pune, India — open to relocating worldwide. The fastest way to reach me is email.</p>
+    <p style="color:var(--ink-dim); max-width:60ch; font-size:15.5px;">Based in Pune, India and open to relocation. I am particularly interested in senior Data Science, Applied AI, GenAI, and Agentic AI opportunities where technical depth and business impact both matter. The fastest way to reach me is email.</p>
     <div class="contact-grid">
       <a class="btn primary" href="mailto:nitishprasad15@gmail.com">nitishprasad15@gmail.com</a>
       <a class="btn" href="https://www.linkedin.com/in/nitishprasad15/" target="_blank" rel="noopener">in&nbsp; LinkedIn</a>
