@@ -76,9 +76,18 @@
   }
   .nav-name{
     font-family:'Space Grotesk',sans-serif;
-    font-weight:700;font-size:15px;letter-spacing:.01em;
+    font-weight:700;font-size:19px;letter-spacing:.01em;
+    display:flex;align-items:center;gap:10px;
   }
-  .nav-name::after{content:"." ;color:var(--accent-2)}
+  .nav-name-text::after{content:"." ;color:var(--accent-2)}
+  .nav-title{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;
+    color:#fff;padding:6px 13px;border-radius:999px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    box-shadow:0 4px 10px rgba(139,92,246,.25);
+    white-space:nowrap;
+  }
   .nav-links{display:flex;gap:18px;font-size:12px;font-weight:600}
   .nav-links a{
     text-decoration:none;color:var(--ink-faint);
@@ -369,6 +378,8 @@
   @media (max-width:760px){
     .wrap{padding:0 18px}
     .nav-inner{padding:12px 18px}
+    .nav-name{font-size:16px;gap:7px}
+    .nav-title{font-size:10.5px;padding:5px 11px}
     .nav-links{gap:11px;font-size:11px;overflow:auto;white-space:nowrap}
     .hero{padding-top:65px}
     .hero-grid{grid-template-columns:1fr;gap:34px}
@@ -399,6 +410,7 @@
 
   @media (max-width:520px){
     .nav-links a:nth-child(3),.nav-links a:nth-child(4){display:none}
+    .nav-title{display:none}
     .company-card{flex-basis:100%}
     .impact-strip{grid-template-columns:1fr 1fr}
     .impact-value{font-size:24px}
@@ -551,7 +563,7 @@
 
 <header>
   <div class="nav-inner">
-    <div class="nav-name mono">Nitish Prasad</div>
+    <div class="nav-name mono"><span class="nav-name-text">Nitish Prasad</span><span class="nav-title">AI Solution Lead</span></div>
     <nav class="nav-links">
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
